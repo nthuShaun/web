@@ -33,9 +33,9 @@ import RegisterPage from "views/examples/RegisterPage.js";
 // others
 
 ReactDOM.render(
-  <BrowserRouter >
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
-      <Route path="/index" render={props => <Index {...props} />} />
+      <Route path="/" exact render={props => <Index {...props} />} />
       <Route
         path="/nucleo-icons"
         render={props => <NucleoIcons {...props} />}
@@ -52,7 +52,7 @@ ReactDOM.render(
         path="/register-page"
         render={props => <RegisterPage {...props} />}
       />
-      <Redirect to="/landing-page" />
+      <Redirect to="/"/>
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
