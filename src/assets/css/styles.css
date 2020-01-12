@@ -1,6 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
-
-
 .nav-link {
     text-align: center;
+}
+
+/* Create the parallax scrolling effect */
+.page-header { 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
