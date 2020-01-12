@@ -117,7 +117,7 @@ function ExamplesNavbar() {
                 target="_blank"
                 title="Follow us on Twitter"
               >
-                <i className="fa fa-twitter" />
+                <i className="center fa fa-twitter" />
                 <p className="d-lg-none">Twitter</p>
               </NavLink>
             </NavItem>
@@ -128,7 +128,7 @@ function ExamplesNavbar() {
                 target="_blank"
                 title="Like us on Facebook"
               >
-                <i className="fa fa-facebook-square" />
+                <i className="center fa fa-facebook-square" />
                 <p className="d-lg-none">Facebook</p>
               </NavLink>
             </NavItem>
@@ -139,7 +139,7 @@ function ExamplesNavbar() {
                 target="_blank"
                 title="Follow us on Instagram"
               >
-                <i className="fa fa-instagram" />
+                <i className="center fa fa-instagram" />
                 <p className="d-lg-none">Instagram</p>
               </NavLink>
             </NavItem>
@@ -150,7 +150,7 @@ function ExamplesNavbar() {
                 target="_blank"
                 title="Star on GitHub"
               >
-                <i className="fa fa-github" />
+                <i className="center fa fa-github" />
                 <p className="d-lg-none">GitHub</p>
               </NavLink>
             </NavItem>
