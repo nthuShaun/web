@@ -60,7 +60,7 @@ function LandingPage() {
             <Row>
               <Col md="3">
                 <div className="info">
-                  <img src={require("assets/img/dormitory/washing-machine.png")}
+                  <img src={require("assets/img/dormitory/washicon_3.png")}
                     alt={"washing-machine"}
                     className="washing-machine"
                     height="100%" width="100"
@@ -76,7 +76,7 @@ function LandingPage() {
               </Col>
               <Col md="3">
                 <div className="info">
-                  <img src={require("assets/img/dormitory/washing-machine.png")}
+                  <img src={require("assets/img/dormitory/washicon_1.png")}
                     alt={"washing-machine"}
                     className="washing-machine"
                     height="100%" width="100"
@@ -91,7 +91,7 @@ function LandingPage() {
               </Col>
               <Col md="3">
                 <div className="info">
-                  <img src={require("assets/img/dormitory/washing-machine.png")}
+                  <img src={require("assets/img/dormitory/washicon_4.png")}
                     alt={"washing-machine"}
                     className="washing-machine"
                     height="100%" width="100"
@@ -106,7 +106,7 @@ function LandingPage() {
               </Col>
               <Col md="3">
                 <div className="info">
-                  <img src={require("assets/img/dormitory/washing-machine.png")}
+                  <img src={require("assets/img/dormitory/washicon_2.png")}
                     alt={"washing-machine"}
                     className="washing-machine"
                     height="100%" width="100"
