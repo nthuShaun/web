@@ -53,75 +53,148 @@ function LandingPage() {
       <ExamplesNavbar />
       <LandingPageHeader />
       <div className="main">
-        <div className="section text-center">
+        <div id="dorm-1" className="section text-center">
           <Container>
-            <br />
-            <br />
-            <Row>
-              <Col md="3">
-                <div className="info">
-                  <img src={require("assets/img/dormitory/washicon_3.png")}
-                    alt={"washing-machine"}
-                    className="washing-machine"
-                    height="100%" width="100"
-                  />
-                  <div className="description">
-                    <h4 className="info-title">剩餘時間: 0分鐘</h4>
-                    
-                    <Button className="btn-link" color="info" href="#pablo">
-                      了解更多
-                    </Button>
+            <h2 className="title">實齋</h2>
+            <hr className="underline" />
+              <br />
+              <br />
+              <Row>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_3.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <img src={require("assets/img/dormitory/washicon_1.png")}
-                    alt={"washing-machine"}
-                    className="washing-machine"
-                    height="100%" width="100"
-                  />
-                  <div className="description">
-                    <h4 className="info-title">剩餘時間: 0分鐘</h4>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      了解更多
-                    </Button>
+                </Col>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_1.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <img src={require("assets/img/dormitory/washicon_4.png")}
-                    alt={"washing-machine"}
-                    className="washing-machine"
-                    height="100%" width="100"
-                  />
-                  <div className="description">
-                    <h4 className="info-title">剩餘時間: 0分鐘</h4>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      了解更多
-                    </Button>
+                </Col>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_4.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <img src={require("assets/img/dormitory/washicon_2.png")}
-                    alt={"washing-machine"}
-                    className="washing-machine"
-                    height="100%" width="100"
-                  />
-                  <div className="description">
-                    <h4 className="info-title">剩餘時間: 0分鐘</h4>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      了解更多
-                    </Button>
+                </Col>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_2.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        <div id="dorm-2" className="section text-center">
+          <Container>
+            <h2 className="title">仁齋</h2>
+            <hr className="underline" />
+              <br />
+              <br />
+              <Row>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_3.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_1.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_4.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_2.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         <div id="about" className="section section-dark text-center">
           <Container>
             <h2 className="title">我們是誰</h2>
