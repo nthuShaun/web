@@ -1,11 +1,12 @@
-.navbar .navbar-nav .nav-item .nav-link{
+
+.navbar .navbar-nav .nav-item .nav-link, 
+.navbar .navbar-nav .nav-item .nav-link p{
   text-align: center;
   line-height:1.6;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: .4rem 0;
   padding:10px 10px;
   opacity:.8;
-  font-size:.8rem;
+  font-size:.6rem;
   text-transform:uppercase;
   font-weight:600;
   color:#66615B
@@ -14,10 +15,9 @@
 .navbar .navbar-brand{
     text-align: center;
     font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin: .4rem 0;
     padding: 10px 20px;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     color: #66615B;
     text-transform:uppercase
 }

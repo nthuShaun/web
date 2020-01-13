@@ -55,7 +55,7 @@ function LandingPage() {
       <div className="main">
         <div id="dorm-1" className="section text-center">
           <Container>
-            <h2 className="title">實齋</h2>
+            <h3 className="title">實齋</h3>
             <hr className="underline" />
               <br />
               <br />
@@ -126,7 +126,7 @@ function LandingPage() {
           </div>
         <div id="dorm-2" className="section text-center">
           <Container>
-            <h2 className="title">仁齋</h2>
+            <h3 className="title">仁齋</h3>
             <hr className="underline" />
               <br />
               <br />
