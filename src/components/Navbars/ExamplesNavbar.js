@@ -20,6 +20,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // nodejs library that concatenates strings
 import classnames from "classnames";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // reactstrap components
 import {
@@ -98,20 +99,22 @@ function ExamplesNavbar() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink
+	      <AnchorLink
+	        className="nav-link"
 		href="#about"
 		target="_self"
 	      >
                 <i className="nc-icon nc-layout-11" /> about
-              </NavLink>
+	      </AnchorLink>
             </NavItem>
             <NavItem>
-              <NavLink
+              <AnchorLink
+	        className="nav-link"
                 href="#contact"
                 target="_self"
               >
                 <i className="nc-icon nc-book-bookmark" /> contact 
-              </NavLink>
+              </AnchorLink>
             </NavItem>
             <NavItem>
               <NavLink
