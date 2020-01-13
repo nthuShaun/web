@@ -19,7 +19,8 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Container } from "reactstrap";
+import { Button, Container, Row, Col } from "reactstrap";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 // core components
 
@@ -43,6 +44,7 @@ function LandingPageHeader() {
   return (
     <>
       <div
+	id="first-page"
         style={{
           backgroundImage: "url(" + require("assets/img/dormitory/renzai.jpg") + ")"
         }}
@@ -50,17 +52,35 @@ function LandingPageHeader() {
         data-parallax={true}
         ref={pageHeader}
       >
-        <div className="filter" />
-        <Container>
-          <div className="motto text-center">
-            <h1>實齋</h1>
-            <h3>洗衣機空閒中</h3>
-            <br />
-      
-          </div>
-        </Container>
-      </div>
-    </>
+      <div className="filter" />
+      <Container className="container-fluid text-center">
+        <Row>
+          <Col>
+            <AnchorLink href="#dorm-1" target="_self">
+              <div className="border rounded-circle m-auto service-box" style={{backgroundColor: 'rgba(255,255,255,0.75)'}}>
+                <img src={require("assets/img/dormitory/dormicon_1.png")}
+                  className="dormitary"
+                  height="55%" width="auto"
+                />			
+                <h4 className="dorm-text">實齋</h4>
+              </div>
+            </AnchorLink>
+          </Col>
+          <Col>
+            <AnchorLink href="#dorm-2" target="_self">
+              <div className="border rounded-circle m-auto service-box" style={{backgroundColor: 'rgba(255,255,255,0.75)'}}>
+                <img src={require("assets/img/dormitory/dormicon_3.png")}
+                  className="dormitary"
+                  height="55%" width="auto"
+                />
+                <h4 className="dorm-text">仁齋</h4>
+              </div>
+            </AnchorLink>
+          </Col>
+        </Row>
+      </Container>
+</div>
+</>
   );
 }
 

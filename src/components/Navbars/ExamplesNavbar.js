@@ -20,6 +20,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // nodejs library that concatenates strings
 import classnames from "classnames";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 // reactstrap components
 import {
@@ -72,12 +73,11 @@ function ExamplesNavbar() {
         <div className="navbar-translate">
           <NavbarBrand
             data-placement="bottom"
-            to="/index"
+            href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1001801" //新竹市東區天氣
             target="_blank"
-            title="Coded by Creative Tim"
-            tag={Link}
+            title="from Central Weather Bureau"
           >
-            Washing Machine Monitor 
+            <i className="center fa fa-thermometer-3" /> __℃
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -98,17 +98,31 @@ function ExamplesNavbar() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink to="/index" tag={Link}>
-                <i className="nc-icon nc-layout-11" /> about
-              </NavLink>
+	      <AnchorLink
+	        className="nav-link"
+		href="#first-page"
+		target="_self"
+	      >
+                <i className="nc-icon nc-box" /> dormitary
+	      </AnchorLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                href="https://demos.creative-tim.com/paper-kit-react/#/documentation?ref=pkr-examples-navbar"
-                target="_blank"
+	      <AnchorLink
+	        className="nav-link"
+		href="#about"
+		target="_self"
+	      >
+                <i className="nc-icon nc-layout-11" /> about
+	      </AnchorLink>
+            </NavItem>
+            <NavItem>
+              <AnchorLink
+	        className="nav-link"
+                href="#contact"
+                target="_self"
               >
-                <i className="nc-icon nc-book-bookmark" /> contact 
-              </NavLink>
+                <i className="nc-icon nc-badge" /> contact 
+              </AnchorLink>
             </NavItem>
             <NavItem>
               <NavLink
