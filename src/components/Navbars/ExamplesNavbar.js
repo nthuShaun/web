@@ -73,12 +73,11 @@ function ExamplesNavbar() {
         <div className="navbar-translate">
           <NavbarBrand
             data-placement="bottom"
-            to="/index"
+            href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1001801" //新竹市東區天氣
             target="_blank"
             title="Coded by Creative Tim"
-            tag={Link}
           >
-            Washing Machine Monitor 
+            <i className="center fa fa-thermometer-3" /> __℃
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
