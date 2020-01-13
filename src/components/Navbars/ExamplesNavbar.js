@@ -100,6 +100,15 @@ function ExamplesNavbar() {
             <NavItem>
 	      <AnchorLink
 	        className="nav-link"
+		href="#first-page"
+		target="_self"
+	      >
+                <i className="nc-icon nc-box" /> dormitary
+	      </AnchorLink>
+            </NavItem>
+            <NavItem>
+	      <AnchorLink
+	        className="nav-link"
 		href="#about"
 		target="_self"
 	      >
@@ -112,7 +121,7 @@ function ExamplesNavbar() {
                 href="#contact"
                 target="_self"
               >
-                <i className="nc-icon nc-book-bookmark" /> contact 
+                <i className="nc-icon nc-badge" /> contact 
               </AnchorLink>
             </NavItem>
             <NavItem>

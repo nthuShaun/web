@@ -44,6 +44,7 @@ function LandingPageHeader() {
   return (
     <>
       <div
+	id="first-page"
         style={{
           backgroundImage: "url(" + require("assets/img/dormitory/renzai.jpg") + ")"
         }}
