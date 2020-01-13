@@ -75,7 +75,7 @@ function ExamplesNavbar() {
             data-placement="bottom"
             href="https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=1001801" //新竹市東區天氣
             target="_blank"
-            title="Coded by Creative Tim"
+            title="from Central Weather Bureau"
           >
             <i className="center fa fa-thermometer-3" /> __℃
           </NavbarBrand>
