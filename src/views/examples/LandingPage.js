@@ -122,7 +122,7 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
-        <div className="section section-dark text-center">
+        <div id="about" className="section section-dark text-center">
           <Container>
             <h2 className="title">我們是誰</h2>
             <Row>
@@ -267,7 +267,7 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
-        <div className="section landing-section">
+        <div id="contact" className="section landing-section">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
