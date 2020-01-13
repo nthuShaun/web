@@ -9,6 +9,7 @@ const wm2 = "SELECT current, Time_Stamp FROM current_data WHERE address=2 ORDER 
 const wm3 = "SELECT current, Time_Stamp FROM current_data WHERE address=3 ORDER BY Time_Stamp DESC LIMIT 3;";
 const wm4 = "SELECT current, Time_Stamp FROM current_data WHERE address=4 ORDER BY Time_Stamp DESC LIMIT 3;";
 
+
 const con = mysql.createConnection({
 	host: "140.114.216.81",
 	user: "edorm",
@@ -31,13 +32,51 @@ app.get('/*', (req, res) => {
 });
 
 app.post('/data', (req, res) => {
-  let data = {};
-  con.query(wm1, (err, result, field) => {
-    if (err) {
-      throw err;
-    }
-    res.json({current: 3});
+  let data = [];
+
+  const promise1 = new Promise((resolve, reject) => {
+    con.query(wm1, (err, result, field) => {
+      if (err) {
+         throw err;
+      }
+      data.push(result[0]);
+      resolve();
+    });
   });
+  const promise2 = new Promise((resolve, reject) => {
+    con.query(wm2, (err, result, field) => {
+      if (err) {
+         throw err;
+      }
+      data.push(result[0]);
+      resolve();
+    });
+  });
+  const promise3 = new Promise((resolve, reject) => {
+    con.query(wm3, (err, result, field) => {
+      if (err) {
+         throw err;
+      }
+      data.push(result[0]);
+      resolve();
+    });
+  });
+  const promise4 = new Promise((resolve, reject) => {
+    con.query(wm4, (err, result, field) => {
+      if (err) {
+         throw err;
+      }
+      data.push(result[0]);
+      resolve();
+    });
+  });
+
+  Promise.all([promise1, promise2, promise3, promise4])
+    .then((value) => {
+      //console.log(data);
+      res.send(data);
+    })
+
 });
 
 app.listen(5000, () => console.log('Server listening...'));

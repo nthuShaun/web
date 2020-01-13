@@ -40,23 +40,51 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-const data = {current: 1};
-
 function LandingPage() {
-  const [current, setCurrent] = useState(0);
+  const [current1, setCurrent1] = useState(0);
+  const [current2, setCurrent2] = useState(0);
+  const [current3, setCurrent3] = useState(0);
+  const [current4, setCurrent4] = useState(0);
   // set interval
+
   useEffect(() => {
-    setInterval(fetchData, 1000);
+    fetchData();
+    setInterval(fetchData, 60000);
   }, []);
 
   useEffect(() => {
-    if (current > 0) {
+    if (current1 > 0) {
       document.getElementById("time1").innerHTML = "使用中";
     }
     else {
       document.getElementById("time1").innerHTML = "空閒中";
     }
-  }, [current]);
+  }, [current1]);
+
+  useEffect(() => {
+    if (current2 > 0) {
+      document.getElementById("time2").innerHTML = "使用中";
+    }
+    else {
+      document.getElementById("time2").innerHTML = "空閒中";
+    }
+  }, [current2]);
+  useEffect(() => {
+    if (current3 > 0) {
+      document.getElementById("time3").innerHTML = "使用中";
+    }
+    else {
+      document.getElementById("time3").innerHTML = "空閒中";
+    }
+  }, [current3]);
+  useEffect(() => {
+    if (current4 > 0) {
+      document.getElementById("time4").innerHTML = "使用中";
+    }
+    else {
+      document.getElementById("time4").innerHTML = "空閒中";
+    }
+  }, [current4]);
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -73,7 +101,10 @@ function LandingPage() {
     .then(res => res.json())
     .then(json => {
       console.log(json);
-      setCurrent(json.current);
+      setCurrent1(json[0].current);
+      setCurrent2(json[1].current);
+      setCurrent3(json[2].current);
+      setCurrent4(json[3].current);
     });
   }
 
