@@ -105,3 +105,38 @@
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
+
+/* card flipping */
+.card {
+  top: 0%;
+  transition: .5s all ease;
+  transform: rotateX(60deg) scale(0.7);
+  perspective: 900px;
+  box-shadow: 0px 20px 50px #555;
+  animation: entry 1s linear 1;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: rotate(0deg) scale(1) translateY(10px);
+  transition: .5s all ease;
+}
+
+.t1 {
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  bottom: 5%;
+  list-style: none;
+  color: #fff;
+  opacity: .5;
+}
+
+.section .card-profile {
+  margin-top: 4rem;
+}
+
+
+
+

@@ -197,7 +197,8 @@ function LandingPage() {
           </div>
         <div id="about" className="section section-dark text-center">
           <Container>
-            <h2 className="title">我們是誰</h2>
+            <h3 className="title">我們是誰</h3>
+	    <hr className="underline" />
             <Row>
               <Col md="4">
                 <Card className="card-profile card-plain">
