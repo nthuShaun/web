@@ -57,23 +57,15 @@ function LandingPageHeader() {
         <Row>
           <Col>
             <AnchorLink href="#dorm-1" target="_self">
-              <div className="border rounded-circle m-auto service-box" style={{backgroundColor: 'rgba(255,255,255,0.75)'}}>
-                <img src={require("assets/img/dormitory/dormicon_1.png")}
-                  className="dormitary"
-                  height="55%" width="auto"
-                />			
-                <h4 className="dorm-text">實齋</h4>
+              <div className="border rounded-circle m-auto dorm-box-1" style={{backgroundImage: "url(" + require("assets/img/dormitory/shizhai.png") + ")"}}>
+                <h4 className="dorm-text-1">實齋</h4>
               </div>
             </AnchorLink>
           </Col>
           <Col>
             <AnchorLink href="#dorm-2" target="_self">
-              <div className="border rounded-circle m-auto service-box" style={{backgroundColor: 'rgba(255,255,255,0.75)'}}>
-                <img src={require("assets/img/dormitory/dormicon_3.png")}
-                  className="dormitary"
-                  height="55%" width="auto"
-                />
-                <h4 className="dorm-text">仁齋</h4>
+              <div className="border rounded-circle m-auto dorm-box-2" style={{backgroundImage: "url(" + require("assets/img/dormitory/lnzhai.png") + ")"}}>
+                <h4 className="dorm-text-2">仁齋</h4>
               </div>
             </AnchorLink>
           </Col>
