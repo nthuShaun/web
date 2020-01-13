@@ -62,7 +62,7 @@ function LandingPageHeader() {
                   className="dormitary"
                   height="55%" width="auto"
                 />			
-                <h4 className="dorm-text">仁齋</h4>
+                <h4 className="dorm-text">實齋</h4>
               </div>
             </AnchorLink>
           </Col>
@@ -73,7 +73,7 @@ function LandingPageHeader() {
                   className="dormitary"
                   height="55%" width="auto"
                 />
-                <h4 className="dorm-text">實齋</h4>
+                <h4 className="dorm-text">仁齋</h4>
               </div>
             </AnchorLink>
           </Col>
