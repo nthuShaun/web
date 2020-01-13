@@ -1,11 +1,28 @@
-.nav-link {
+.navbar .navbar-nav .nav-item .nav-link{
+  text-align: center;
+  line-height:1.6;
+  margin:10px 0px;
+  padding:10px 15px;
+  opacity:.8;font-size:14px;
+  text-transform:uppercase;
+  font-weight:600;
+  color:#66615B
+}
+
+.navbar .navbar-brand{
     text-align: center;
+    font-weight:600;
+    margin:10px 0px;
+    padding:10px 15px;
+    font-size:20px;
+    color:#66615B;
+    text-transform:uppercase
 }
 
 /* Create the parallax scrolling effect */
 .page-header { 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
