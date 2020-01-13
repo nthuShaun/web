@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 // reactstrap components
 import {
@@ -40,7 +40,24 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
+const data = {current: 1};
+
 function LandingPage() {
+  const [current, setCurrent] = useState(0);
+  // set interval
+  useEffect(() => {
+    setInterval(fetchData, 1000);
+  }, []);
+
+  useEffect(() => {
+    if (current > 0) {
+      document.getElementById("time1").innerHTML = "使用中";
+    }
+    else {
+      document.getElementById("time1").innerHTML = "空閒中";
+    }
+  }, [current]);
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -48,6 +65,18 @@ function LandingPage() {
       document.body.classList.remove("profile-page");
     };
   });
+
+  const fetchData = () => {
+    fetch('/data', {
+      method: 'POST'
+    })
+    .then(res => res.json())
+    .then(json => {
+      console.log(json);
+      setCurrent(json.current);
+    });
+  }
+
   return (
     <>
       <ExamplesNavbar />
@@ -68,7 +97,7 @@ function LandingPage() {
                       height="100%" width="100"
                     />
                     <div className="description">
-                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <h4 id="time1" className="info-title">剩餘時間: 0分鐘</h4>
                       
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
@@ -84,7 +113,7 @@ function LandingPage() {
                       height="100%" width="100"
                     />
                     <div className="description">
-                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <h4 id="time2" className="info-title">剩餘時間: 0分鐘</h4>
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
                       </Button>
@@ -99,7 +128,7 @@ function LandingPage() {
                       height="100%" width="100"
                     />
                     <div className="description">
-                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <h4 id="time3" className="info-title">剩餘時間: 0分鐘</h4>
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
                       </Button>
@@ -114,7 +143,7 @@ function LandingPage() {
                       height="100%" width="100"
                     />
                     <div className="description">
-                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <h4 id="time4" className="info-title">剩餘時間: 0分鐘</h4>
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
                       </Button>
@@ -393,5 +422,7 @@ function LandingPage() {
     </>
   );
 }
+
+
 
 export default LandingPage;

@@ -24,17 +24,20 @@ con.connect((err) => {
   console.log('connection success');
 });
 
-con.query(wm1, (err, result, field) => {
-  if (err) {
-    throw err;
-  }
-  console.log(result);
-});
-
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.post('/data', (req, res) => {
+  let data = {};
+  con.query(wm1, (err, result, field) => {
+    if (err) {
+      throw err;
+    }
+    res.json({current: 3});
+  });
 });
 
 app.listen(5000, () => console.log('Server listening...'));
