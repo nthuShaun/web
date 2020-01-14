@@ -335,7 +335,7 @@ function LandingPage() {
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img src={require("assets/img/developer/developer_3.jpg")} alt="..."></img>
+                      <img src={require("assets/img/default-avatar.png")} alt="..."></img>
                     </a>
                   </div>
                   <CardBody>

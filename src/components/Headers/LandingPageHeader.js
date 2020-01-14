@@ -46,7 +46,7 @@ function LandingPageHeader() {
       <div
 	id="first-page"
         style={{
-          backgroundImage: "url(" + require("assets/img/homeBG.jpg") + ")"
+          backgroundImage: "url(" + require("assets/img/dormitory/renzai.jpg") + ")"
         }}
         className="page-header"
         data-parallax={true}
