@@ -39,7 +39,7 @@ app.post('/data', (req, res) => {
       if (err) {
          throw err;
       }
-      data.push(result[0]);
+      data.push(result);
       resolve();
     });
   });
@@ -48,7 +48,7 @@ app.post('/data', (req, res) => {
       if (err) {
          throw err;
       }
-      data.push(result[0]);
+      data.push(result);
       resolve();
     });
   });
@@ -57,7 +57,7 @@ app.post('/data', (req, res) => {
       if (err) {
          throw err;
       }
-      data.push(result[0]);
+      data.push(result);
       resolve();
     });
   });
@@ -66,14 +66,14 @@ app.post('/data', (req, res) => {
       if (err) {
          throw err;
       }
-      data.push(result[0]);
+      data.push(result);
       resolve();
     });
   });
 
   Promise.all([promise1, promise2, promise3, promise4])
     .then((value) => {
-      //console.log(data);
+      //  console.log(data);
       res.send(data);
     })
 
