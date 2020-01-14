@@ -172,7 +172,7 @@ function LandingPage() {
               <Row>
                 <Col md="3">
                   <div className="info">
-                    <img src={require("assets/img/dormitory/washicon_3.png")}
+                    <img src={require("assets/img/dormitory/washicon_2.png")}
                       alt={"washing-machine"}
                       className="washing-machine"
                       height="100%" width="100"
@@ -180,21 +180,6 @@ function LandingPage() {
                     <div className="description">
                       <h4 className="info-title">剩餘時間: 0分鐘</h4>
                       
-                      <Button className="btn-link" color="info" href="#pablo">
-                        了解更多
-                      </Button>
-                    </div>
-                  </div>
-                </Col>
-                <Col md="3">
-                  <div className="info">
-                    <img src={require("assets/img/dormitory/washicon_1.png")}
-                      alt={"washing-machine"}
-                      className="washing-machine"
-                      height="100%" width="100"
-                    />
-                    <div className="description">
-                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
                       </Button>
@@ -218,7 +203,22 @@ function LandingPage() {
                 </Col>
                 <Col md="3">
                   <div className="info">
-                    <img src={require("assets/img/dormitory/washicon_2.png")}
+                    <img src={require("assets/img/dormitory/washicon_1.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_3.png")}
                       alt={"washing-machine"}
                       className="washing-machine"
                       height="100%" width="100"
@@ -250,7 +250,7 @@ function LandingPage() {
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
                         <CardTitle tag="h4">清大動機</CardTitle>
-                        <h6 className="card-category">偵測裝置部署</h6>
+                        <h6 className="card-category">Sensor Developer</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">
@@ -342,7 +342,7 @@ function LandingPage() {
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
                         <CardTitle tag="h4">計網概小組</CardTitle>
-                        <h6 className="card-category">網頁設計</h6>
+                        <h6 className="card-category">UI Designer</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">
