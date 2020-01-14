@@ -193,7 +193,7 @@ function LandingPage() {
               <Row>
                 <Col md="3">
                   <div className="info">
-                    <img src={require("assets/img/dormitory/washicon_3.png")}
+                    <img src={require("assets/img/dormitory/washicon_2.png")}
                       alt={"washing-machine"}
                       className="washing-machine"
                       height="100%" width="100"
@@ -201,21 +201,6 @@ function LandingPage() {
                     <div className="description">
                       <h4 className="info-title">剩餘時間: 0分鐘</h4>
                       
-                      <Button className="btn-link" color="info" href="#pablo">
-                        了解更多
-                      </Button>
-                    </div>
-                  </div>
-                </Col>
-                <Col md="3">
-                  <div className="info">
-                    <img src={require("assets/img/dormitory/washicon_1.png")}
-                      alt={"washing-machine"}
-                      className="washing-machine"
-                      height="100%" width="100"
-                    />
-                    <div className="description">
-                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
                       </Button>
@@ -239,7 +224,22 @@ function LandingPage() {
                 </Col>
                 <Col md="3">
                   <div className="info">
-                    <img src={require("assets/img/dormitory/washicon_2.png")}
+                    <img src={require("assets/img/dormitory/washicon_1.png")}
+                      alt={"washing-machine"}
+                      className="washing-machine"
+                      height="100%" width="100"
+                    />
+                    <div className="description">
+                      <h4 className="info-title">剩餘時間: 0分鐘</h4>
+                      <Button className="btn-link" color="info" href="#pablo">
+                        了解更多
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div className="info">
+                    <img src={require("assets/img/dormitory/washicon_3.png")}
                       alt={"washing-machine"}
                       className="washing-machine"
                       height="100%" width="100"
@@ -257,10 +257,148 @@ function LandingPage() {
           </div>
         <div id="about" className="section section-dark text-center">
           <Container>
-            <h3 className="title">我們是誰</h3>
+            <h3 className="title">Who we are?</h3>
 	    <hr className="underline" />
             <Row>
               <Col md="4">
+                <Card className="card-profile card-plain">
+                  <div className="card-avatar">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img src={require("assets/img/default-avatar.png")} alt="..."></img>
+                    </a>
+                  </div>
+                  <CardBody>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <div className="author">
+                        <CardTitle tag="h4">Henry Ford</CardTitle>
+                        <h6 className="card-category">Product Manager</h6>
+                      </div>
+                    </a>
+                    <p className="card-description text-center">
+                      
+                    </p>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button
+                      className="btn-just-icon btn-neutral"
+                      color="link"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      <i className="fa fa-twitter" />
+                    </Button>
+                    <Button
+                      className="btn-just-icon btn-neutral ml-1"
+                      color="link"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      <i className="fa fa-google-plus" />
+                    </Button>
+                    <Button
+                      className="btn-just-icon btn-neutral ml-1"
+                      color="link"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      <i className="fa fa-linkedin" />
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-profile card-plain">
+                  <div className="card-avatar">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img src={require("assets/img/default-avatar.png")} alt="..."></img>
+                    </a>
+                  </div>
+                  <CardBody>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <div className="author">
+                        <CardTitle tag="h4">Henry Ford</CardTitle>
+                        <h6 className="card-category">Product Manager</h6>
+                      </div>
+                    </a>
+                    <p className="card-description text-center">
+                      
+                    </p>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button
+                      className="btn-just-icon btn-neutral"
+                      color="link"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      <i className="fa fa-twitter" />
+                    </Button>
+                    <Button
+                      className="btn-just-icon btn-neutral ml-1"
+                      color="link"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      <i className="fa fa-google-plus" />
+                    </Button>
+                    <Button
+                      className="btn-just-icon btn-neutral ml-1"
+                      color="link"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      <i className="fa fa-linkedin" />
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+              <Col md="4">
+                <Card className="card-profile card-plain">
+                  <div className="card-avatar">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img src={require("assets/img/developer/developer_3.jpg")} alt="..."></img>
+                    </a>
+                  </div>
+                  <CardBody>
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <div className="author">
+                        <CardTitle tag="h4">Hong Yu Cheng</CardTitle>
+                        <h6 className="card-category">UI Designer</h6>
+                      </div>
+                    </a>
+                    <p className="card-description text-center">
+                      
+                    </p>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Button
+                      className="btn-just-icon btn-neutral"
+                      color="link"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      <i className="fa fa-twitter" />
+                    </Button>
+                    <Button
+                      className="btn-just-icon btn-neutral ml-1"
+                      color="link"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      <i className="fa fa-google-plus" />
+                    </Button>
+                    <Button
+                      className="btn-just-icon btn-neutral ml-1"
+                      color="link"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                    >
+                      <i className="fa fa-linkedin" />
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Col>
+	      <Col md="4">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
