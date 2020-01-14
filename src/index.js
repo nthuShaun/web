@@ -38,14 +38,14 @@ import RegisterPage from "views/examples/RegisterPage.js";
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
-      <Route path="/" exact render={props => <Index {...props} />} />
+      <Route path="/" exact render={props => <LandingPage {...props} />} />
       <Route
         path="/nucleo-icons"
         render={props => <NucleoIcons {...props} />}
       />
       <Route
-        path="/landing-page"
-        render={props => <LandingPage {...props} />}
+        path="/list-feature"
+        render={props => <Index {...props} />}
       />
       <Route
         path="/profile-page"

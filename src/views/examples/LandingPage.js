@@ -46,45 +46,13 @@ function LandingPage() {
   const [current3, setCurrent3] = useState(0);
   const [current4, setCurrent4] = useState(0);
   // set interval
+  const usage = ['空閒中', '使用中'];
+  let Data = {};
 
   useEffect(() => {
     fetchData();
-    setInterval(fetchData, 60000);
+    setInterval(fetchData, 10000);
   }, []);
-
-  useEffect(() => {
-    if (current1 > 0) {
-      document.getElementById("time1").innerHTML = "使用中";
-    }
-    else {
-      document.getElementById("time1").innerHTML = "空閒中";
-    }
-  }, [current1]);
-
-  useEffect(() => {
-    if (current2 > 0) {
-      document.getElementById("time2").innerHTML = "使用中";
-    }
-    else {
-      document.getElementById("time2").innerHTML = "空閒中";
-    }
-  }, [current2]);
-  useEffect(() => {
-    if (current3 > 0) {
-      document.getElementById("time3").innerHTML = "使用中";
-    }
-    else {
-      document.getElementById("time3").innerHTML = "空閒中";
-    }
-  }, [current3]);
-  useEffect(() => {
-    if (current4 > 0) {
-      document.getElementById("time4").innerHTML = "使用中";
-    }
-    else {
-      document.getElementById("time4").innerHTML = "空閒中";
-    }
-  }, [current4]);
 
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -100,12 +68,23 @@ function LandingPage() {
     })
     .then(res => res.json())
     .then(json => {
-      console.log(json);
-      setCurrent1(json[0].current);
-      setCurrent2(json[1].current);
-      setCurrent3(json[2].current);
-      setCurrent4(json[3].current);
+      loadData(json);
+      setCurrent1(json[0][0].current > 0 ? 1 : 0);
+      setCurrent2(json[1][0].current > 0 ? 1 : 0);
+      setCurrent3(json[2][0].current > 0 ? 1 : 0);
+      setCurrent4(json[3][0].current > 0 ? 1 : 0);
     });
+  }
+
+  const loadData = (data) => {
+    Data = data.map((washer) => {
+      return washer.map((oneData) => {
+        oneData.Time_Stamp = new Date(oneData.Time_Stamp);
+        oneData.Time_Stamp = oneData.Time_Stamp.toLocaleTimeString('en-gb');
+        return oneData;
+      });
+    });
+    console.log(Data);
   }
 
   return (
@@ -128,7 +107,7 @@ function LandingPage() {
                       height="100%" width="100"
                     />
                     <div className="description">
-                      <h4 id="time1" className="info-title">剩餘時間: 0分鐘</h4>
+                      <h4 id="time1" className="info-title">{usage[current1]}</h4>
                       
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
@@ -144,7 +123,7 @@ function LandingPage() {
                       height="100%" width="100"
                     />
                     <div className="description">
-                      <h4 id="time2" className="info-title">剩餘時間: 0分鐘</h4>
+                      <h4 id="time2" className="info-title">{usage[current2]}</h4>
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
                       </Button>
@@ -159,7 +138,7 @@ function LandingPage() {
                       height="100%" width="100"
                     />
                     <div className="description">
-                      <h4 id="time3" className="info-title">剩餘時間: 0分鐘</h4>
+                      <h4 id="time3" className="info-title">{usage[current3]}</h4>
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
                       </Button>
@@ -174,7 +153,7 @@ function LandingPage() {
                       height="100%" width="100"
                     />
                     <div className="description">
-                      <h4 id="time4" className="info-title">剩餘時間: 0分鐘</h4>
+                      <h4 id="time4" className="info-title">{usage[current4]}</h4>
                       <Button className="btn-link" color="info" href="#pablo">
                         了解更多
                       </Button>
@@ -270,8 +249,8 @@ function LandingPage() {
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Henry Ford</CardTitle>
-                        <h6 className="card-category">Product Manager</h6>
+                        <CardTitle tag="h4">清大動機</CardTitle>
+                        <h6 className="card-category">偵測裝置部署</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">
@@ -316,8 +295,8 @@ function LandingPage() {
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Sophie West</CardTitle>
-                        <h6 className="card-category">Designer</h6>
+                        <CardTitle tag="h4">計網概小組</CardTitle>
+                        <h6 className="card-category">NB-IoT</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">
@@ -362,8 +341,8 @@ function LandingPage() {
                   <CardBody>
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <div className="author">
-                        <CardTitle tag="h4">Robert Orben</CardTitle>
-                        <h6 className="card-category">Developer</h6>
+                        <CardTitle tag="h4">計網概小組</CardTitle>
+                        <h6 className="card-category">網頁設計</h6>
                       </div>
                     </a>
                     <p className="card-description text-center">
